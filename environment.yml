@@ -1,0 +1,19 @@
+name: tracks_to_4d
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python=3.11
+  - pytorch=2.5.1
+  - pytorch-cuda=12.1
+  - torchvision=0.20.1
+  - pip:
+    - tqdm
+    - opencv-python
+    - matplotlib
+    - einops
+    - imageio
+    - imageio[ffmpeg]

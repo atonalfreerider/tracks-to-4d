@@ -22,7 +22,7 @@ for i in range(0,len(glob.glob('%s/resized_video/*.jpg'%video_name)),1):
 video=torch.from_numpy(np.stack(framess)).permute(0,3,1,2).unsqueeze(0).float()
 
 from cotracker.predictor import CoTrackerPredictor
-torch.cuda.set_device(1)
+torch.cuda.set_device(0)
 model = CoTrackerPredictor(
     checkpoint=os.path.join(
         './thirdparty/co-tracker/checkpoints/cotracker2.pth'
